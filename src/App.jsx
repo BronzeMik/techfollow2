@@ -10,7 +10,7 @@ import CreateBlog from "./pages/CreateBlog";
 import MyBlogs from "./pages/MyBlogs";
 import FeaturedBlogs from "./pages/FeaturedBlogs";
 import LatestBlogs from "./pages/LatestBlogs";
-import BlogPage from "./components/Blog/BlogPage";
+import BlogPage from "./pages/BlogPage";
 import UpdateBlog from "./pages/UpdateBlog";
 
 const App = () => {

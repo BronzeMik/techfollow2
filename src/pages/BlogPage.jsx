@@ -1,6 +1,6 @@
 import {  useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { supabase } from "../../supabase/client";
+import { supabase } from "../supabase/client";
 import DOMPurify from "dompurify";
 import { Card } from "react-bootstrap";
 
