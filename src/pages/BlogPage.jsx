@@ -22,9 +22,12 @@ const BlogPage = () => {
                 .select()
                 .eq('id', id)
             //Check is user is author of blog
-            if(user.id == data[0].user_uuid) {
-                setIsUser(true)
+            if(user) {
+                if(user.id == data[0].user_uuid) {
+                    setIsUser(true)
+                }
             }
+            
                 
   
             // After fetching data stored it in posts state. 
@@ -67,11 +70,14 @@ const BlogPage = () => {
     
     return (
         <>
+       
+        
         <div className='blog-post-grid'>
         {loading && <h2>Loading Blog</h2>}
         <div className='update-delete'>
                 {isUser && <a href={`/updateblog/${id}`} ><button className='blog-cta'>Edit Blog</button></a>}
                 {isUser && <a href='#popup1'><button className='blog-cta'>Delete Blog</button></a>}
+                
         </div>
         <div className='main-blog-content'>
         
