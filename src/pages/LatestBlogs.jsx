@@ -51,7 +51,7 @@ export default function LatestBlogs() {
             title={post.title}
             description={post.description}
             image={post.image && `https://tdfuqxopvbwbxxvlgsvu.supabase.co/storage/v1/object/public/blog_images/${post.user_uuid}/${post.image_url}`}
-            url = {`/${post.id}`}
+            url = {`/blog/${post.id}`}
             />
             )
         )}
