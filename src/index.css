@@ -1,5 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "News Cycle", sans-serif, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,6 +17,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  font-family: "News Cycle", sans-serif;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -65,11 +72,35 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/*------------ Global ------------*/
+.text-small {
+  font-size: 0.8em;
+  color: #333;
+}
+
+/* ------------------ NavBar ---------------------------------------------------------*/
+
+.navbar {
+  height: 100px;
+  position: fixed;
+  width: 100vw;
+}
+
+/*------------------- Hero ----------------------------------------------------------*/
 
 .hero-main-container {
   background: url('../hero-blog.png');
   background-repeat: no-repeat;
   background-size: cover;
+  line-height: 2.5em;
+}
+
+.hero-main-container p {
+  font-size: 1.2rem;
+}
+
+.hero-main-container h1 {
+  margin: 25px 0;
 }
 
 .hero-content-center {
@@ -87,6 +118,46 @@ button:focus-visible {
   margin: 20px 10px 20px 10px;
   padding: 20px 30px
 }
+
+/*------------ Home Grid -------------------*/
+.home-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+/*---------------------Trending Block ---------------------*/
+.trending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 70%;
+  padding: 30px;
+  text-align: center;
+}
+
+.grid-item {
+  border: 1px solid #acacac88;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 3fr;
+}
+
+.index-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 0 5px;
+}
+
+/* ------------- Blog -------------*/
 
 .blogs-container {
   display: flex;
@@ -134,7 +205,7 @@ button:focus-visible {
   color: #fff;
 }
 
-
+/*------------------ Blog Page Grid ------------------------------------------*/
 
 .blog-post-container {
   display: flex;
@@ -166,6 +237,8 @@ button:focus-visible {
   margin-top: 50px;
 }
 
+/* -------------------- Update / Delete Blog Buttons ----------------------------------*/
+
 .update-delete {
   grid-area: 1 / 1 / span 1 / span 3;
   display: flex;
@@ -183,6 +256,7 @@ button:focus-visible {
   background-color: #b60000;
 }
 
+/* --------------------- Delete Blog Pop-Up ---------------------------*/
 .overlay {
   position: fixed;
   top: 0;
