@@ -82,7 +82,7 @@ button:focus-visible {
 
 .navbar {
   height: 100px;
-  position: fixed;
+
   width: 100vw;
 }
 
@@ -178,6 +178,43 @@ button:focus-visible {
   padding-left: 100px;
 }
 
+/*--------- Home Tags ------------*/
+.list-tags {
+  display: unset;
+}
+.tags-container {
+  padding-top: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  z-index: 1;
+}
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  width: 80%;
+}
+
+.tag-btn {
+  background-color: #333333ba;
+  color: #fff;
+  text-align: center;
+  padding: 17px 10px;
+  overflow: auto;
+  border-radius: 30px;
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.tag-btn a {
+  color: #fff;
+}
+
+.tag-btn:hover {
+  transform: translateY(-5px);
+}
 
 /* ------------- Blog -------------*/
 
