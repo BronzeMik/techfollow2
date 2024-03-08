@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { supabase } from "../supabase/client";
-import TrendingPostCard from "./TrendingPostCard";
+import { supabase } from "../../../supabase/client";
+import BlogListCard from './BlogListCard'
 
 
-export default function TrendingTopics() {
+
+export default function BlogListHome() {
     const [posts, setPosts] = useState(null);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -15,7 +16,8 @@ export default function TrendingTopics() {
             
             if(data) {
                 setPosts(data)
-                console.log(posts)
+                
+                
             } else {
                 console.log(error)
             }
@@ -29,20 +31,16 @@ export default function TrendingTopics() {
     return(
         <>
             {loading && <p>Loading Trending Posts</p>}
-            <h2 style={{marginTop: '50px'}}>Trending Posts</h2>
-                <div className="grid">
-                    {posts && posts.map((post, index) =>
-                    <div className='grid-item' key={post.id}> 
-                    <div className='index-flex' style={{color: '#848484'}}>0{index + 1}</div>
-                    <TrendingPostCard
+                    {posts && posts.map((post) =>
+                    <BlogListCard
+                    key={post.id}
                     author={post.author_name}
                     title={post.title}
                     date={post.created_at}
+                    img = {`https://tdfuqxopvbwbxxvlgsvu.supabase.co/storage/v1/object/public/blog_images/${post.user_uuid}/${post.image_url}`}
                     url = {`/blog/${post.id}`}
                     />
-                    </div>
                     )}
-            </div>
         </>
     )
 }

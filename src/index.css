@@ -122,7 +122,8 @@ button:focus-visible {
 /*------------ Home Grid -------------------*/
 .home-grid {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 70px;
 }
 
 /*---------------------Trending Block ---------------------*/
@@ -156,6 +157,27 @@ button:focus-visible {
   font-size: 1.5rem;
   padding: 0 5px;
 }
+
+/*--------- Home Blog List ------------*/
+.blog-list-home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 80%;
+  margin: 10px 0;
+  border: 1px solid #acacac30;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 5px rgba(0, 0, 0, .015);
+
+}
+
+.list-blogs {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
 
 /* ------------- Blog -------------*/
 
