@@ -11,8 +11,6 @@ export default function TagsContainer() {
                 <TagButton name='5G tech' />
                 <TagButton name='AR/VR' />
                 <TagButton name='biotechnology' />
-                <TagButton name='robotics' />
-                <TagButton name='artificial tech' />
             </div>
         </>
     )

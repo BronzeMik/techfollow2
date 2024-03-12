@@ -1,11 +1,13 @@
 import HeroContent from "./HeroContent"
+import HeroDiv from "./HeroDiv"
 export default function Hero() {
     return(
         <>
-            <div className="hero-main-container d-flex justify-content-center">
-                <div className="hero-content-center">
+            <HeroDiv />
+            <div className='hero-div' style={{textAlign:'center', padding: '50px'}}>
+                    
                     <HeroContent />
-                </div>
+                
             </div>
         </>
     )

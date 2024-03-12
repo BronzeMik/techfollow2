@@ -30,9 +30,9 @@ export default function TrendingTopics() {
     return(
         <>
             {loading && <p>Loading Trending Posts</p>}
-            <h2 style={{marginTop: '50px'}}>Trending Posts</h2>
                 <div className="grid">
                     {posts && posts.map((post, index) =>
+                    index < 4 &&
                     <div className='grid-item' key={post.id}> 
                     <div className='index-flex' style={{color: '#848484'}}>0{index + 1}</div>
                     <TrendingPostCard

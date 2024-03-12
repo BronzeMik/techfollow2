@@ -4,7 +4,7 @@ import BlogListCard from './BlogListCard'
 
 
 
-export default function BlogListHome() {
+export default function BlogListHome({num}) {
     const [posts, setPosts] = useState(null);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -31,7 +31,8 @@ export default function BlogListHome() {
     return(
         <>
             {loading && <p>Loading Trending Posts</p>}
-                    {posts && posts.map((post) =>
+                    {posts && posts.map((post, index) =>
+                    index < parseInt(num) &&
                     <BlogListCard
                     key={post.id}
                     author={post.author_name}

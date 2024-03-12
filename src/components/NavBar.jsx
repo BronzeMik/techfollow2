@@ -20,7 +20,7 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{zIndex: '999'}}>
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" style={{zIndex: '999', borderBottom: '1px solid rgba(0, 0, 0, .4)'}}>
       <Container className='nav-container'>
         <Navbar.Brand><img src={logo} style={{width: '50%'}} className='nav-logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
