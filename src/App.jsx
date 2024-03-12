@@ -12,6 +12,7 @@ import FeaturedBlogs from "./pages/FeaturedBlogs";
 import LatestBlogs from "./pages/LatestBlogs";
 import BlogPage from "./pages/BlogPage";
 import UpdateBlog from "./pages/UpdateBlog";
+import BlogByTag from "./pages/BlogByTag";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route exact path='/blog/:id' element={<BlogPage />} />
+            <Route exact path='tag/:tag' element={<BlogByTag />} />
             <Route path="/latestblogs" element={<LatestBlogs />} />
             <Route path="/featuredblogs" element={<FeaturedBlogs />} />
             <Route path="/register" element={<Register />} />
