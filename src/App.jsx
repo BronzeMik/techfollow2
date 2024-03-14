@@ -13,6 +13,7 @@ import LatestBlogs from "./pages/LatestBlogs";
 import BlogPage from "./pages/BlogPage";
 import UpdateBlog from "./pages/UpdateBlog";
 import BlogByTag from "./pages/BlogByTag";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/passwordreset" element={<PasswordReset />} />
             <Route path="*" element={ <NotFound />}/>
           </Routes>
+          <Footer />
         </div>
       </div>
     </>

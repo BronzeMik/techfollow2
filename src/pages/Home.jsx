@@ -1,3 +1,4 @@
+import EmailSubscribe from "../components/EmailSubscribe";
 import BlogListHome from "../components/Home/BlogList/BlogListHome";
 import Hero from "../components/Home/Hero/Hero";
 import TagsContainer from "../components/Home/TagsContainer";
@@ -33,6 +34,11 @@ const Home = () => {
           />
         </div>
         
+      </div>
+
+      <div className='featured-subscribe'>
+                <EmailSubscribe />
+
       </div>
     </>
     

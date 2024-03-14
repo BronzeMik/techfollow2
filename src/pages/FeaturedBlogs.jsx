@@ -2,6 +2,7 @@
 import { supabase } from "../supabase/client";
 import { useState, useEffect } from "react";
 import BlogListHome from "../components/Home/BlogList/BlogListHome";
+import EmailSubscribe from "../components/EmailSubscribe";
 
 export default function FeaturedBlogs() {
     const [loading, setLoading] = useState(false); 
@@ -38,14 +39,22 @@ export default function FeaturedBlogs() {
     return(
         <>
             <div className='blogs-container'>
+                <div className='featured-hero-div-container'>
+                    <h2>Featured Blogs</h2>
+                </div>
+                
             <div className='second-featured-grid-container'>
-                <h2>Featured Blogs</h2>
-                <div className='second-home-grid'>
+                <div className='second-featured-grid-2'>
                 <BlogListHome 
-                num={3}
+                num={15}
                 />
                 </div>
                 
+            </div>
+
+            <div className='featured-subscribe'>
+                <EmailSubscribe />
+
             </div>
             </div>
         </>

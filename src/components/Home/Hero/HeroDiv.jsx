@@ -12,7 +12,7 @@ export default function HeroDiv() {
                     <div>
                         <p>SUBSCRIBE TO OUR NEWSLETTER</p>
                         <input type="text" placeholder="email"/>
-                        <a href='/latestblogs'><button>Subscribe</button></a>
+                        <a href='#'><button>Subscribe</button></a>
                     </div>
                     
 

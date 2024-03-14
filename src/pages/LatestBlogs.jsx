@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { supabase } from "../supabase/client";
 import { useState, useEffect } from "react";
-import BlogCard from '../components/Blog/BlogCard'
+import BlogListHome from "../components/Home/BlogList/BlogListHome";
+import EmailSubscribe from "../components/EmailSubscribe";
 
 export default function LatestBlogs() {
     const [loading, setLoading] = useState(false); 
@@ -43,17 +44,23 @@ export default function LatestBlogs() {
             {loading ? (
                 <h4>Loading posts...</h4>
             ) : (
-                posts.map((post) => 
-            <BlogCard 
-            key={post.id}
-            author={post.author_name}
-            date={post.created_at}
-            title={post.title}
-            description={post.description}
-            image={post.image && `https://tdfuqxopvbwbxxvlgsvu.supabase.co/storage/v1/object/public/blog_images/${post.user_uuid}/${post.image_url}`}
-            url = {`/blog/${post.id}`}
-            />
-            )
+                <div className='blogs-container'>
+                
+                
+            <div className='second-featured-grid-container'>
+                <div className='second-featured-grid-2'>
+                <BlogListHome 
+                num={15}
+                />
+                </div>
+                
+            </div>
+
+            <div className='featured-subscribe'>
+                <EmailSubscribe />
+
+            </div>
+            </div>
         )}
         </div>
         </>

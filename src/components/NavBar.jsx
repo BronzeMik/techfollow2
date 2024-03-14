@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
-import logo from '../../public/logo_techiefollow.png'
+// import logo from '../../public/logo_techiefollow.png'
 
 const NavBar = () => {
   const { auth, signOut } = useAuth();
@@ -20,9 +20,10 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" style={{zIndex: '999', borderBottom: '1px solid rgba(0, 0, 0, .4)'}}>
+    <Navbar collapseOnSelect expand="lg" style={{zIndex: '999', borderBottom: '1px solid rgba(0, 0, 0, .4)'}}>
       <Container className='nav-container'>
-        <Navbar.Brand><img src={logo} style={{width: '50%'}} className='nav-logo'/></Navbar.Brand>
+        {/* <Navbar.Brand><img src={logo} style={{width: '50%'}} className='nav-logo'/></Navbar.Brand> */}
+        <Navbar.Brand className='nav-logo'>TECHIEFOLLOW</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
