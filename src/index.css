@@ -823,4 +823,13 @@ div.featured-hero-div-container {
     padding: 0;
     overflow-x: hidden;
   }
+
+  .hero-col-2-child {
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .hero-col-2-grandchild {
+    width: 90%;
+  }
 }
