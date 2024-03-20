@@ -41,7 +41,7 @@ export default function HeroContent() {
                 {posts && posts.map((post, index) => {
                     if (index == 0) {
                         return <div className='hero-col-1' key={post.id}
-                        style={{backgroundImage: `url(https://tdfuqxopvbwbxxvlgsvu.supabase.co/storage/v1/object/public/blog_images/${post.user_uuid}/${post.image_url})`, width: '100%',height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', cursor: 'pointer'}} onClick={() => navigate(`/blog/${post.id}`)}>
+                        style={{backgroundImage: `url(https://tdfuqxopvbwbxxvlgsvu.supabase.co/storage/v1/object/public/blog_images/${post.user_uuid}/${post.image_url})`, height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', cursor: 'pointer'}} onClick={() => navigate(`/blog/${post.id}`)}>
                         {post.tags && <p className='hero-tag' style={{fontSize: '14px', padding: '10px 10px'}}>{post.tags[0]}</p>}
                         <h2>{post.title}</h2>
                         <p>{post.created_at}</p>

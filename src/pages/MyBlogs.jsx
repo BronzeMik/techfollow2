@@ -2,11 +2,14 @@
 import { supabase } from "../supabase/client";
 import { useState, useEffect } from "react";
 import BlogCard from "../components/Blog/BlogCard";
+import { useAuth } from "../context/AuthProvider";
+
 
 
 export default function MyBlogs() {
     const [loading, setLoading] = useState(false); 
     const [posts, setPosts] = useState([]); 
+    const { user } = useAuth();
     const [media, setMedia] = useState([]);
     
     
@@ -19,7 +22,6 @@ export default function MyBlogs() {
   
             // Await make wait until that 
             // promise settles and return its result 
-            const {data: {user}} = await supabase.auth.getUser();
             const { data, error } = await supabase
                 .from('user_blogs')
                 .select()
@@ -36,7 +38,7 @@ export default function MyBlogs() {
   
         // Call the function 
         loadPost(); 
-    }, []); 
+    }, [user]); 
     console.log(posts)
     
 

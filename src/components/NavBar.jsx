@@ -25,7 +25,7 @@ const NavBar = () => {
         {/* <Navbar.Brand><img src={logo} style={{width: '50%'}} className='nav-logo'/></Navbar.Brand> */}
         <Navbar.Brand className='nav-logo'>TECHIEFOLLOW</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" style={{backgroundColor: '#fff'}}>
           <Nav className="me-auto">
           {!auth && (
               <Nav.Link as={Link} to="/">

@@ -11,7 +11,7 @@ export default function HeroDiv() {
                 <div className='hero-subscribe-container'>
                     <div>
                         <p>SUBSCRIBE TO OUR NEWSLETTER</p>
-                        <input type="text" placeholder="email"/>
+                        <input type="text" placeholder="email" style={{backgroundColor: '#fff'}}/>
                         <a href='#'><button>Subscribe</button></a>
                     </div>
                     

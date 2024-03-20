@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "../supabase/client";
 import DOMPurify from "dompurify";
 import { Card } from "react-bootstrap";
+import { useAuth } from "../context/AuthProvider";
 
 const BlogPage = () => {
 
@@ -11,12 +12,13 @@ const BlogPage = () => {
     const [allPosts, setallPosts] = useState([]);
     const [loading, setLoading] = useState(false)
     const [isUser, setIsUser] = useState(false);
+    const { user } = useAuth();
     const navigate = useNavigate();
     useEffect(() => {
         const loadPost = async() => {
             setLoading(true)
             // eslint-disable-next-line no-unused-vars
-            const {data: {user}} = await supabase.auth.getUser()
+            
             const { data, error } = await supabase
                 .from('user_blogs')
                 .select()
@@ -35,6 +37,10 @@ const BlogPage = () => {
                 setPost(data);
                 
             } 
+            
+            if(error) {
+                console.log(error)
+            }
             setLoading(false)
         }
 
@@ -47,13 +53,16 @@ const BlogPage = () => {
 
             if(data) {
                 setallPosts(data)
+            } 
+            if(error) {
+                console.log(error)
             }
         }
 
         loadPost();
         loadAll();
         
-    }, [])
+    }, [user, id])
   
     const deleteBlog = async(e) => {
         e.preventDefault();
